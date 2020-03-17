@@ -1,0 +1,81 @@
+{
+  "name": "electron-react-material-ui-boilerplate",
+  "version": "1.0.0",
+  "description": "Boilerplate including React, Electron and Material-ui",
+  "license": "MIT",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cbeltrangomez84/electron-react-material-ui-boilerplate.git"
+  },
+  "homepage": "",
+  "bugs": {
+    "url": "https://github.com/cbeltrangomez84/electron-react-material-ui-boilerplate.git/issues"
+  },
+  "author": {
+    "name": "Carlos Beltrán",
+    "email": "cbeltrangomez@gmail.com",
+    "url": "https://github.com/cbeltrangomez84"
+  },
+  "keywords": [
+    "app",
+    "electron",
+    "react",
+    "material-ui",
+    "reactjs",
+    "source",
+    "webpack",
+    "modules"
+  ],
+  "engines": {
+    "node": ">=9.0.0",
+    "npm": ">=5.0.0",
+    "yarn": ">=1.0.0"
+  },
+  "main": "main.js",
+  "scripts": {
+    "prod": "webpack --mode production --config=./config/webpack.build.config.js && electron --noDevServer .",
+    "start": "webpack-dev-server --hot --host 0.0.0.0 --config=./config/webpack.dev.config.js --mode development",
+    "startNoHot": "webpack-dev-server --no-inline --no-hot --host 0.0.0.0 --config=./config/webpack.dev.config.js --mode development",
+    "build": "webpack --config webpack.build.config.js --mode production",
+    "buildweb": "webpack --config ./config/webpack.config.web.production.js",
+    "package": "npm run build",
+    "postpackage": "electron-packager ./ --out=./builds --icon=./src/res/favicon/myApp.ico"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.8.7",
+    "@material-ui/core": "^4.9.5",
+    "bindings": "TooTallNate/node-bindings#pull/40/head",
+    "electron": "^3.0.6",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
+    "style-loader": "^1.1.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/plugin-proposal-class-properties": "^7.1.0",
+    "@babel/plugin-proposal-decorators": "^7.1.2",
+    "@babel/plugin-proposal-optional-chaining": "^7.8.3",
+    "@babel/plugin-transform-runtime": "^7.8.3",
+    "@babel/preset-env": "^7.8.7",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/preset-typescript": "^7.1.0",
+    "@types/react": "^16.4.18",
+    "@types/react-dom": "^16.0.9",
+    "babel-loader": "^8.0.4",
+    "babel-minify-webpack-plugin": "^0.3.1",
+    "electron-native-loader": "^0.3.0",
+    "electron-native-patch-loader": "^0.3.0",
+    "electron-native-plugin": "Y0nnyy/electron-native-plugin",
+    "electron-packager": "^12.2.0",
+    "electron-rebuild": "^1.8.2",
+    "html-webpack-plugin": "^3.2.0",
+    "source-map-loader": "^0.2.4",
+    "typescript": "^3.1.3",
+    "webpack": "^4.23.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10",
+    "webpack-merge": "^4.1.4"
+  },
+  "optionalDependencies": {}
+}
