@@ -3,36 +3,15 @@ import React from 'react';
 import Dialog from '@material-ui/core/Dialog';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import DialogContent from '@material-ui/core/DialogContent';
-import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogActions from '@material-ui/core/DialogActions';
 import Button from '@material-ui/core/Button';
-
-/*const FW_theme = createMuiTheme({
-   palette: {
-    primary: {
-      light: '#FFF',
-      main: '#FFF',
-      dark: '#FFF',
-      contrastText: '#FFF',
-    },
-    secondary: {
-      light: COLOR.FLIPWIT_COLOR_1,
-      main: COLOR.FLIPWIT_COLOR_1,
-      dark: COLOR.FLIPWIT_COLOR_1,
-      contrastText: COLOR.FLIPWIT_COLOR_1,
-    }
-  },
-});*/
-
-/*const styles = theme => ({
-});*/
+import Typography from '@material-ui/core/Typography';
 
 
 class DialogWindow extends React.Component {
 
   handleClose = (evt) => {
-    //Si se pasa el parametro closeOnClick en false, es porque no se quiere que el popUp se pueda cerrar
-    //dando clic fuera de la ventana en la parte transparente
+    //if closeOnClick param is false, the dialog should not be closed clicking outside
     if(this.props.data.closeOnClick===false) return;
     this.props.closeModalWindow();
   }
@@ -75,9 +54,9 @@ class DialogWindow extends React.Component {
         >
           {showTitle && <DialogTitle id="alert-dialog-title">{this.props.data.title}</DialogTitle>}
           <DialogContent>
-            <DialogContentText id="alert-dialog-description">
+            <Typography component={'span'} variant={'body1'}>
               {this.props.data.message}
-            </DialogContentText>
+            </Typography>
           </DialogContent>
           <DialogActions>
             {buttons}
