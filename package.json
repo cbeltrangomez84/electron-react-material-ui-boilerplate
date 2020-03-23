@@ -37,7 +37,7 @@
     "prod": "webpack --mode production --config=./config/webpack.build.config.js && electron --noDevServer .",
     "start": "webpack-dev-server --hot --host 0.0.0.0 --config=./config/webpack.dev.config.js --mode development",
     "startNoHot": "webpack-dev-server --no-inline --no-hot --host 0.0.0.0 --config=./config/webpack.dev.config.js --mode development",
-    "build": "webpack --config webpack.build.config.js --mode production",
+    "build": "webpack --config ./config/webpack.build.config.js --mode production",
     "buildweb": "webpack --config ./config/webpack.config.web.production.js",
     "package": "npm run build",
     "postpackage": "electron-packager ./ --out=./builds --icon=./src/res/favicon/myApp.ico"
