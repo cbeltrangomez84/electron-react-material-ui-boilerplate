@@ -46,7 +46,7 @@
     "@babel/runtime": "^7.8.7",
     "@material-ui/core": "^4.9.5",
     "bindings": "TooTallNate/node-bindings#pull/40/head",
-    "electron": "^3.0.6",
+    "electron": "^9.4.0",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
     "style-loader": "^1.1.3"
